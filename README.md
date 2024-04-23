@@ -2,14 +2,14 @@
 ## Projet scolaire dans le cadres du cours :
 ### [Optimisation Web - projet: scrollytelling](https://tim-montmorency.com/timdoc/582-424MO/projet-scrollytelling/)
 
-##conception
+## conception
 * Camilia Bouatmani
 * Audrey Dandurand
 
-##Développement/Programmmation
+## Développement/Programmmation
 * Camilia Bouatmani
 
-###Technologies
+### Technologies
 
 * HTML
 * JavaScript
