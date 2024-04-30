@@ -12,9 +12,10 @@ const chapitre6 = document.querySelector('#chpt6');
 const chapitre7 = document.querySelector('#chpt7');
 const chapitre8 = document.querySelector('#chpt8');
 const bodyIndex = document.querySelector('body');
+const chap1SpriteChat = document.querySelector('#chpt1 .blinkfloat')
 
 
-let timeline = gsap.timeline().from(['.fleche-down'], {
+let timeline = gsap.timeline().from(['.fleche-down1'], {
     duration: 0.8,
     opacity: 0,
     repeat: -1,

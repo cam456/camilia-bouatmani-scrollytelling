@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHAT DANS L'ESPACE</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js">
-    <link rel="stylesheet" href="https://unpkg.co/gsap@3/dist/gsap.min.js">
-    <link href="../scss/custom_bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <script
@@ -17,11 +13,24 @@
     crossorigin="anonymous"
     ></script>
    <!-- HEADER-->
-    <header>
-        <h1>Chat dans l'espace</h1>
-        <p>Moi et ma camadade avons decider de crée une histoire a propos d'un chat perdu dans l'espace qui trouve la planet 
-            d'eau et la visite. Il decouvre la planetes et les merveilleuse plantes et animaux qui y habite. Puis un étre magestique lui explique l'histoire
-        de la planet est dit aux petit chat qu'il et temps de retourner chez lui.</p>
+    <header id="intro">
+        <ul class="technique-gsap"> 
+            <li>...</li> 
+            <li>...</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+        </ul>
+        <div class="titre">
+            <h1>ESPACE CHATON</h1>
+        </div>
+
+        <div class="description">
+            <p> UN CHAT PERDU DANS L'ESPACE DÉCOUVRE L'ESPACE </p>
+        </div>
         
         <div class="down"> 
             <img class="fleche-down" src="./media/img/img_elements_visuels/intro-fleche-down.png" alt="intro-fleche-down-dark">
@@ -29,11 +38,15 @@
             <img class="fleche-down" src="./media/img/img_elements_visuels/intro-fleche-down3.png" alt="intro-fleche-down-dark3">
 
         </div>
+        
+        <div class="projet">
+            <p> Projet scrollytelling dasn le cadre du cours optimisation web</p>
+        </div>
     </header>
     <!-- MAIN -->
     <main>
         <!-- CHAPTER1 -->
-        <section id="chpt1">
+        <section class="section" id="chpt1">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -44,10 +57,11 @@
                     </ul> 
                 </li> 
             </ul>
+            <div class="blinkfloat"> <img class="spriteblinkfloat" src="./media/img/img_personnages/chat/blink-float-1.png" alt="chatfloat"></div>
         </section>
 
         <!-- CHAPTER2 -->
-        <section id="chpt2">
+        <section class="section" id="chpt2">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -61,7 +75,7 @@
         </section>
 
         <!-- CHAPTER3 -->
-        <section id="chpt3">
+        <section class="section" id="chpt3">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -75,7 +89,7 @@
         </section>
 
         <!-- CHAPTER4 -->
-        <section id="chpt4">
+        <section class="section" id="chpt4">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -89,7 +103,7 @@
         </section>
 
         <!-- CHAPTER5 -->
-        <section id="chpt5">
+        <section class="section" id="chpt5">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -103,7 +117,7 @@
         </section>
 
         <!-- CHAPTER6 -->
-        <section id="chpt6">
+        <section class="section" id="chpt6">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -117,7 +131,7 @@
         </section>
 
         <!-- CHAPTER7 -->
-        <section id="chpt7">
+        <section class="section" id="chpt7">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -131,7 +145,7 @@
         </section>
 
         <!-- CHAPTER8 -->
-        <section id="chpt8">
+        <section class="section" id="chpt8">
             <ul class="technique-gsap"> 
                 <li>...</li> 
                 <li>...</li> 
@@ -158,4 +172,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TextPlugin3.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <link href="../scss/custom_bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </html>
