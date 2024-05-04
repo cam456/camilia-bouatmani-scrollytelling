@@ -2,10 +2,9 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MotionPathPlugin)
-import gsap from 'https://cdn.skypack.dev/gsap@3.12.0'
-import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap@3.12.0/ScrollTrigger'
 
-const intro - document.querySelector('#intro')
+
+const intro = document.querySelector('#intro');
 const chapitre1 = document.querySelector('#chpt1');
 const chapitre2 = document.querySelector('#chpt2');
 const chapitre3 = document.querySelector('#chpt3');
@@ -15,8 +14,9 @@ const chapitre6 = document.querySelector('#chpt6');
 const chapitre7 = document.querySelector('#chpt7');
 const chapitre8 = document.querySelector('#chpt8');
 const bodyIndex = document.querySelector('body');
-const chap1SpriteChat = document.querySelector('#chpt1 .blinkfloat')
-const fleche1 = document.querySelector('fleche')
+const chap1SpriteChat = document.querySelector('#chpt1.blinkfloat');
+const fleche1 = document.querySelector('fleche');
+
 
 
 
@@ -31,35 +31,89 @@ if (techniqueGsap != null) {
     }
 }
 
-const video = document.querySelector(".intro");
- 
-  gsap.to(".introduction", {
+gsap.to(".intro", {
     scrollTrigger: {
-      pin: true,
+        pin: true,
       scrub: true,
       markers: true,
-      trigger: ".introduction",
+      trigger: ".intro",
     }
-  });
+});
     
-  const no2 = document.querySelector('chap');
 
-  gsap.to('.no2', {
+  gsap.to('.chpt1', {
     scrollTrigger: {
-      trigger: '.no2',
+      trigger: '.chpt1',
       start: '50% 75%',
       end: '50% 25%',
       markers: true,
       scrub: 0.25,
-      onUpdate: (e) => {
-        no2.innerText = e.progress;
-      }
     },
     x: '100%',
     duration: 2,
   });
  
 
+
+  //chpt1
+
+  if (!CSS.supports('animation-timeline: scroll()') && matchMedia('(prefers-reduced-motion: no-preference)')) {
+    gsap.registerPlugin(ScrollTrigger)
+  
+    const scrub = 0.2
+    const trigger = 'intro'
+  
+    gsap.set('p > span', {
+      '--progress': 0,
+      backgroundPositionX: 'calc(-100vmax + (var(--progress) * 100vmax)), calc(-100vmax + (var(--progress) * 100vmax)), 0',
+      color: 'transparent',
+    })
+    gsap.to('p > span', {
+      '--progress': 1,
+        duration: 40,
+        scrollTrigger: {
+        pin: true,
+        trigger: '#chpt1',
+        scrub,
+        start: 'top 10%',
+        end: '150% 0',
+      }
+    })
+    gsap.to('p > span', {
+    duration: 40,
+      color: 'white',
+      scrollTrigger: {
+        trigger: '#chpt1',
+        pin: true,
+        scrub,
+        start: 'top 0%',
+        end: '180% 5%',
+      }
+    })
+  }
+
+  let timeline1 = gsap.timeline({
+    duration: 40,
+    scrollTrigger: {
+        markers: true,
+        scrub: true,
+        trigger: '#chpt1',
+        start: 'top 10%',
+        end: '150% 0',
+        toggleActions: 'play pause reverse pause',
+    }
+}).to('#chapitre1', {
+    backgroundPosition: "-10% 0",
+    ease: "ease.out",
+    scrollTrigger: {
+        markers: true,
+        scrub: true,
+        trigger: '#chpt1',
+        start: 'top 0%',
+        end: '180% 5%',
+        pin: true,
+    }
+})
 
 
 
