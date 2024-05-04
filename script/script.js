@@ -2,8 +2,7 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MotionPathPlugin)
-import gsap from 'https://cdn.skypack.dev/gsap@3.12.0'
-import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap@3.12.0/ScrollTrigger'
+
 
 const intro - document.querySelector('#intro')
 const chapitre1 = document.querySelector('#chpt1');
