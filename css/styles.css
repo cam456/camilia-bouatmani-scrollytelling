@@ -146,18 +146,7 @@ header {
 }
 
 .fleche1{ 
-  margin-left: 23px;
-  margin-top: 50px;
-}
-
-.fleche2{ 
-  margin-top: -20px;
-  margin-left: 10px;
-}
-
-.fleche3{ 
-  margin-top: -40px;
-  margin-left: -10px;
+  font-size: 50px;
 }
 
 
@@ -194,6 +183,7 @@ Chp1
   width: 400px;
   height: 300px;
   overflow: hidden;
+
 
 }
 

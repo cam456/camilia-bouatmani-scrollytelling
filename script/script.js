@@ -42,6 +42,22 @@ const video = document.querySelector(".intro");
     }
   });
     
+  const no2 = document.querySelector('chap');
+
+  gsap.to('.no2', {
+    scrollTrigger: {
+      trigger: '.no2',
+      start: '50% 75%',
+      end: '50% 25%',
+      markers: true,
+      scrub: 0.25,
+      onUpdate: (e) => {
+        no2.innerText = e.progress;
+      }
+    },
+    x: '100%',
+    duration: 2,
+  });
  
 
 
