@@ -2,7 +2,10 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MotionPathPlugin)
+import gsap from 'https://cdn.skypack.dev/gsap@3.12.0'
+import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap@3.12.0/ScrollTrigger'
 
+const intro - document.querySelector('#intro')
 const chapitre1 = document.querySelector('#chpt1');
 const chapitre2 = document.querySelector('#chpt2');
 const chapitre3 = document.querySelector('#chpt3');
@@ -13,29 +16,48 @@ const chapitre7 = document.querySelector('#chpt7');
 const chapitre8 = document.querySelector('#chpt8');
 const bodyIndex = document.querySelector('body');
 const chap1SpriteChat = document.querySelector('#chpt1 .blinkfloat')
+const fleche1 = document.querySelector('fleche')
 
-
-let timeline = gsap.timeline().from(['.fleche-down1'], {
-    duration: 0.8,
-    opacity: 0,
-    repeat: -1,
-    ease: 'slow',
-    stagger: {
-        each: 0.5,
-    },
-})
 
 
 const techniqueGsap = document.querySelector('.technique-gsap');
 let scrollIndex;
 if (techniqueGsap != null) {
     window.addEventListener('scroll', () => {
-        bodyIndex.classList.add('is-scrolling');
-        window.clearTimeout(scrollIndex);
-        scrollIndex = setTimeout(removeClassIsScrolling, 100);
     });
 
     function removeClassIsScrolling() {
-        bodyIndex.classList.remove('is-scrolling');
+      bodyIndex.classList.remove('is-scrolling');
     }
 }
+
+const video = document.querySelector(".intro");
+ 
+  gsap.to(".introduction", {
+    scrollTrigger: {
+      pin: true,
+      scrub: true,
+      markers: true,
+      trigger: ".introduction",
+    }
+  });
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
