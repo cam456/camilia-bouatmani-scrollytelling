@@ -296,6 +296,47 @@ gsap.timeline({repeat: Infinity})
       });
 
 /*---CHPT7---*/
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-07 .bulles5", { duration: 5, y: "-10%", })
+  .to("#chapitre-07 .bulles5", { duration: 4, y: "10%", })
+  .to("#chapitre-07 .bulles5", { duration: 5, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-07 .chat7", { duration: 3, y: "-10%", })
+  .to("#chapitre-07 .chat7", { duration: 4, y: "10%", })
+  .to("#chapitre-07 .chat7", { duration: 3, y: "-10%", });
+
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-07 .personnage-mauve", { duration: 3, y: "-10%", })
+  .to("#chapitre-07 .personnage-mauve", { duration: 4, y: "10%", })
+  .to("#chapitre-07 .personnage-mauve", { duration: 3, y: "-10%", });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const chat7 = document.querySelector('#chat7');
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(chat7, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#chapitre-07",
+        start: "10vh",
+        end: "650vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(chat7, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-08",
+        start: "650vh",
+        end: "651vh", // 
+        scrub: true
+      }
+    });
+  });
 
 
 

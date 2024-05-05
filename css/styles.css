@@ -573,84 +573,24 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   text-align: center;
 }
 
-
-#chapitre-07 .algue{
-  position: absolute;
-  width:80vw;
-  top: 45vh;
-  left: 45vw;
-}
-
-#chapitre-07 .algue-02{
-  position: absolute;
-  width:30%;
-  top: 60vh;
-  left: 60vw;
-}
-
-#chapitre-07 .chat-orange {
-  position: absolute;
-  top: 60vh;
-  left: 10vw;
-}
-
-#chapitre-07 .corps-personnage-mauve {
-  position: absolute;
-  width: 18vw;
-  top: 60vh;
-  left: 41vw;
-  z-index: 2;
-}
-
-#chapitre-07 .bras-gauche-personnage-mauve {
-  position: absolute;
-  width: 4vw;
-  top: 63vh;
-  left: 54vw;
-  transform: rotate(-0.04turn);
-  z-index: 1;
-}
-
-#chapitre-07 .bras-droit-personnage-mauve {
-  position: absolute;
-  width: 4vw;
-  top: 63vh;
-  left: 39vw;
-  transform: scaleX(-1) rotate(-0.04turn);
-  z-index: 1;
-}
-
-#chapitre-07 .oeil-droit-personnage-mauve {
-  position: absolute;
-  width: 0.8vw;
-  top: 65.5vh;
-  left: 50vw;
-  z-index: 3;
-}
-
-#chapitre-07 .oeil-gauche-personnage-mauve {
-  position: absolute;
-  width: 0.8vw;
-  top: 65.5vh;
-  left: 46vw;
+#chapitre-07 .chat7 {
+  background-image: url(../media/img/img_personnages/chat/blink-fall-1.png);
+  overflow: hidden;
+  position: fixed;
+  top: 10%;
+  left: 45%;
+  transform: translateX(-50%);
+  opacity: 0; 
   transform: scaleX(-1);
-  z-index: 3;
+  z-index: 1;
 }
 
-
-#chapitre-07 .bouche-personnage-mauve {
+#chapitre-07 .personnage-mauve {
   position: absolute;
-  width: 2vw;
-  top: 67vh;
-  left: 47.5vw;
-  z-index: 3;
-}
-
-#chapitre-07 .baleine{
-  position: absolute;
-  width:70vw;
-  top: 10vh;
+  width: 20vw;
+  top: 17vh;
   left: 40vw;
+  z-index: 1;
 }
 
 #chapitre-07 p{
@@ -668,9 +608,10 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   width: 100vw;
   height: 100vh;
   background-image: url(/media/img/img_arriere_plan/espace.png);
+  z-index: 1;
 }
 
-#chapitre-08 .chat-orange {
+#chapitre-08 .chat8 {
   position: absolute;
   top: 30vh;
   left: 40vw;
@@ -679,7 +620,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 #chapitre-08 p{
   width: 70vw;
   position: absolute;
-  color: var(--blanc);
+  color: var(--white);
   top: 5vh;
   text-align: center;
   padding-left: 15%;
@@ -694,48 +635,4 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 }
 
 /* -- HTML SPRITE SHEET -- */
-.body-sprite-sheets {
-  height: 300vh;
-}
 
-.sprite-sheets-poisson {
-  width: 50vw;
-  aspect-ratio: 1/1;
-  background-image: url(/img/img_personnages/spritesheet_poisson.png);
-  background-size: 7100% 100%;
-  animation-name: poisson;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(71);
-  animation-play-state: paused;
-}
-
-.body-sprite-sheets.is-scrolling .sprite-sheets-poisson {
-  animation-play-state: running;
-}
-
-@keyframes poisson {
-  from { background-position: 0 0; }
-  to { background-position: -100% 0; }
-}
-
-.sprite-sheets-plante {
-  width: 50vw;
-  aspect-ratio: 1/1;
-  background-image: url(/img/img_personnages/spritesheet_plante.png);
-  background-size: 2300% 100%;
-  animation-name: plante;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(23);
-  animation-play-state: paused;
-}
-
-.body-sprite-sheets.is-scrolling .sprite-sheets-plante {
-  animation-play-state: running;
-}
-
-@keyframes plante {
-  from { background-position: 0 0; }
-  to { background-position: -100% 0; }
-}
