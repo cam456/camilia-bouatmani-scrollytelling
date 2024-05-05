@@ -302,8 +302,19 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   position: absolute;
   width:20vw;
   top: 50vh;
-  left: 85vw;
+  left: 88vw;
 }
+
+#chapitre-03 .sprite-sheet-plante{
+  position: absolute;
+  width:10vw;
+  top: 65vh;
+  left: 81vw;
+  transform-origin: bottom center;
+  transform: scaleX(-1);
+}
+
+
 
 /* -- CHPT4 -- */
 
@@ -399,6 +410,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 }
 
 
+
 /* -- CHPT5 -- */
 
 #chapitre-05 {
@@ -483,6 +495,22 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   transform: scaleX(-1);
 }
 
+#chapitre-05 .sprite-sheet-plante{
+  position: absolute;
+  width:10vw;
+  top: 79vh;
+  left: 13vw;
+  transform-origin: bottom center;
+}
+
+#chapitre-05 .sprite-sheet-poisson{
+  position: absolute;
+  width:5vw;
+  transform-origin: bottom center;
+  top: 79vh;
+  left: 13vw;
+  transform: scaleX(-1);
+}
 
 
 
@@ -511,6 +539,15 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   top: 70vh;
   left: 10vw;
 }
+
+#chapitre-06 .sprite-sheet-poisson{
+  position: absolute;
+  width:5vw;
+  transform-origin: bottom center;
+  top: vh;
+  left: 93vw;
+}
+
 
 #chapitre-06 .personnage-mauve {
   position: absolute;
@@ -557,8 +594,6 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   transform-origin: bottom center;
   z-index: 1;
 }
-
-
 
 
 /* -- CHPT7 -- */
@@ -636,5 +671,53 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   color: var(--marine);
 }
 
-/* -- HTML SPRITE SHEET -- */
+/* --HTML-SPRITE-SHEET-- */
+
+.body-sheet{
+  height: 300vh;
+}
+
+.sprite-sheet-plante {
+  background-image: url(../media/img/img_elements_visuels/spritesheet_plante_2.png);
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background-size: 2300% 100%;
+  animation-name: plante;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(21);
+  animation-play-state: paused;
+}
+
+@keyframes plante {
+  from { background-position: 0 0; }
+  to { background-position: -100% 0; }
+}
+
+.body-sprite-sheets.is-scrolling .sprite-sheets-plante {
+  animation-play-state: running;
+}
+
+
+
+.sprite-sheet-poisson{
+  background-image: url(../media/img/img_elements_visuels/spritesheet_poisson.png);
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background-size: 7200% 100%;
+  animation-name: poisson;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(71);
+  animation-play-state: paused;
+}
+
+@keyframes poisson {
+  from { background-position: 0 0; }
+  to { background-position: -100% 0; }
+}
+
+.body-sprite-sheets.is-scrolling .sprite-sheets-poisson {
+  animation-play-state: running;
+}
 

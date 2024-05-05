@@ -23,7 +23,7 @@ gsap.timeline({repeat: Infinity})
     gsap.to(chatOrange, {
       duration: 3,
       x: "-100%",
-      y: "100%",
+      y: "10%",
       scrollTrigger: {
         trigger: "#chapitre-01",
         pin: true,
@@ -36,7 +36,7 @@ gsap.timeline({repeat: Infinity})
     gsap.to(chatOrange, {
       duration: 5,
       x: "-220%",
-      y: "100%",
+      y: "10%",
       scale: 0.5,
       scrollTrigger: {
         trigger: "#chapitre-01",
@@ -146,6 +146,7 @@ gsap.timeline({repeat: Infinity})
   .from("#chapitre-04 .poisson-bleu-foncer", { duration: 5, y: "-10%", })
   .to("#chapitre-04 .poisson-bleu-foncer", { duration: 3, y: "10%", })
   .to("#chapitre-04 .poisson-bleu-foncer", { duration: 7, y: "-10%", });
+  
 
 document.addEventListener("DOMContentLoaded", function() {
     const chat4 = document.querySelector('#chat4');
@@ -223,6 +224,16 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-05 .chat5", { duration: 4, y: "10%", })
   .to("#chapitre-05 .chat5", { duration: 3, y: "-10%", });
 
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-05 .sprite-sheet-poisson", { duration: 2, y: "-10%", })
+  .to("#chapitre-05 .sprite-sheet-poisson", { duration: 2, y: "10%", })
+  .to("#chapitre-05 .sprite-sheet-poisson", { duration: 5, y: "-10%", });
+
+  gsap.timeline({repeat: Infinity})
+  .from("#chapitre-05 .raie", { duration: 2, y: "-10%", })
+  .to("#chapitre-05 .raie", { duration: 2, y: "10%", })
+  .to("#chapitre-05 .raie", { duration: 5, y: "-10%", });
+
   const chpt5 = document.querySelector("#chapitre-05");
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -274,6 +285,11 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-06 .chat6", { duration: 4, y: "10%", })
   .to("#chapitre-06 .chat6", { duration: 3, y: "-10%", });
 
+  gsap.timeline({repeat: Infinity})
+  .from("#chapitre-06 .sprite-sheet-poisson", { duration: 2, y: "-10%", })
+  .to("#chapitre-06 .sprite-sheet-poisson", { duration: 2, y: "10%", })
+  .to("#chapitre-06 .sprite-sheet-poisson", { duration: 5, y: "-10%", });
+
 gsap.timeline({repeat: Infinity})
   .from("#chapitre-06 .personnage-mauve", { duration: 2, y: "-10%", })
   .to("#chapitre-06 .personnage-mauve", { duration: 5, y: "5%", })
@@ -313,6 +329,11 @@ gsap.timeline({repeat: Infinity})
         });
 
       });
+
+   
+
+
+
 
 /*---CHPT7---*/
 gsap.timeline({repeat: Infinity})
@@ -366,4 +387,8 @@ gsap.timeline({repeat: Infinity})
   .from("#chapitre-08 .chat8", { duration: 3, y: "-10%", })
   .to("#chapitre-08 .chat8", { duration: 4, y: "10%", })
   .to("#chapitre-08 .chat8", { duration: 3, y: "-10%", });
+
+
+  
+
 
