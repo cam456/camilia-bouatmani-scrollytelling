@@ -614,19 +614,21 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 #chapitre-08 .chat8 {
   position: absolute;
   top: 30vh;
-  left: 40vw;
+  left: 45vw;
+  transform: scaleX(-1);
 }
 
 #chapitre-08 p{
   width: 70vw;
   position: absolute;
-  color: var(--white);
+  color: red;
   top: 5vh;
   text-align: center;
   padding-left: 15%;
+  
 }
 
-/* -- FOOTER -- */
+/* --FOOTER-- */
 
 .texte-footer{
   font-size: 10px;

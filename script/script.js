@@ -8,26 +8,45 @@ gsap.to(".down", {
 
 /*---CHPT1---*/
 const chpt1 = document.querySelector("#chapitre-01");
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-01 .chat-orange", { duration: 3, y: "-10%", })
+  .to("#chapitre-01 .chat-orange", { duration: 3, y: "10%", })
+  .to("#chapitre-01 .chat-orange", { duration: 3, y: "-10%", });
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.timeline({repeat: Infinity})
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const chatOrange = document.querySelector('#chapitre-01 .chat-orange');
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.to(chatOrange, {
+      duration: 3,
+      x: "-100%",
+      y: "100%",
+      scrollTrigger: {
+        trigger: "#chapitre-01",
+        pin: true,
+        start: "top top",
+        end: "200%",
+        scrub: true
+      }
+    });
 
-  ScrollTrigger.create({
-    trigger: "#chapitre-01",
-    start: "top top",
-    end: "bottom bottom",
-    pin: true,
-    scrub: true
+    gsap.to(chatOrange, {
+      duration: 5,
+      x: "-220%",
+      y: "100%",
+      scale: 0.5,
+      scrollTrigger: {
+        trigger: "#chapitre-01",
+        start: "top top",
+        end: "200%",
+        scrub: true
+      }
+    });
 });
-
-gsap.timeline({repeat: 5})
-  .from("#chapitre-01 .planete", { duration: 3, scale: 0})
-  .to("#chapitre-01 .planete", { duration: 5,});
-
-gsap.timeline({repeat: 5})
-  .from("#chapitre-01 .chat-orange", { duration: 3, x: "100%", y: "100%"})
-  .to("#chapitre-01 .chat-orange", { duration: 5, x: "-200%", y: "100%", scale: 0.5});
-
-
+    
 
 /*---CHPT2---*/
 
@@ -341,4 +360,10 @@ gsap.timeline({repeat: Infinity})
 
 
 /*---CHPT8---*/
+
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-08 .chat8", { duration: 3, y: "-10%", })
+  .to("#chapitre-08 .chat8", { duration: 4, y: "10%", })
+  .to("#chapitre-08 .chat8", { duration: 3, y: "-10%", });
 
