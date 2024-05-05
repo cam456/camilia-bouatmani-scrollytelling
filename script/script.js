@@ -1,10 +1,7 @@
 /*---HEADER---*/
 
-gsap.to(".down", { 
-    duration: 4,
-    y: '40',
-    repeat: -1,
-  });
+  
+  
 
 /*---CHPT1---*/
 const chpt1 = document.querySelector("#chapitre-01");
@@ -46,7 +43,7 @@ gsap.timeline({repeat: Infinity})
       }
     });
 });
-    
+
 
 /*---CHPT2---*/
 
@@ -328,10 +325,32 @@ gsap.timeline({repeat: Infinity})
           
         });
 
+
       });
 
+      document.addEventListener("DOMContentLoaded", function() {
+        const poissonElement = document.querySelector('.sprite-sheet-poisson');
+    
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.to(poissonElement, {
+            scrollTrigger: {
+                trigger: "#chapitre-06",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: true,
+            },
+            onComplete: function() {
+                poissonElement.classList.add('is-scrolling');
+            },
+            onReverseComplete: function() {
+                poissonElement.classList.remove('is-scrolling');
+            }
+        });
+    });
    
-
+  
+      
 
 
 
@@ -382,6 +401,65 @@ gsap.timeline({repeat: Infinity})
 
 /*---CHPT8---*/
 
+let circle = document.querySelector("#circle");
+let anim1 = gsap.to(circle,{ 
+  morphSVG: {
+    shape: "#etoile",
+    
+
+  },
+  repeat: -1,
+  yoyo: true 
+});
+
+let circles = document.querySelector("#circles");
+let anim2 = gsap.to(circles,{ 
+  morphSVG: {
+    shape: "#etoiles",
+    
+
+  },
+  repeat: -1,
+  yoyo: true 
+});
+
+
+let circless = document.querySelector("#circless");
+let anim3 = gsap.to(circless,{ 
+  morphSVG: {
+    shape: "#etoiless",
+    
+
+  },
+  repeat: -1,
+  yoyo: true 
+});
+
+let circlesss = document.querySelector("#circlesss");
+let anim4 = gsap.to(circlesss,{ 
+  morphSVG: {
+    shape: "#etoilesss",
+    
+
+  },
+  repeat: -1,
+  yoyo: true 
+});
+
+
+let circlessss = document.querySelector("#circlessss");
+let anim5 = gsap.to(circlessss,{ 
+  morphSVG: {
+    shape: "#etoilessss",
+    
+
+  },
+  repeat: -1,
+  yoyo: true 
+});
+
+
+
 
 gsap.timeline({repeat: Infinity})
   .from("#chapitre-08 .chat8", { duration: 3, y: "-10%", })
@@ -389,6 +467,7 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-08 .chat8", { duration: 3, y: "-10%", });
 
 
+  
   
 
 

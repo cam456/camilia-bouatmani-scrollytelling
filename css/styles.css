@@ -110,6 +110,47 @@ h3 {
   animation: float 2s linear 0s infinite ;
 }
 
+.animationbas{
+  position: relative;
+  top: 8.5vh;
+
+}
+
+svg{
+ width: 100vw;
+}
+
+#white{
+  fill: var(--white);
+}
+
+#lightblue{
+  fill: var(--faded);
+}
+
+#darkblue{
+  fill: var(--bleu);
+}
+
+#triangle1_3, #triangle1_2, #triangle1 {
+  transition: all 1s ease;
+  animation: triangleAnimation 3s infinite;
+}
+
+@keyframes triangleAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(50%);
+
+  }
+  100% {
+    transform: translateY(100%);
+
+  }
+}
+
 .titre {
   animation: animate1 2s linear 0s infinite;;
 }
@@ -131,11 +172,13 @@ h3 {
 }
 
 .down {
-  position: relative;
-  display: grid;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 70vw;
+  position: absolute;
+  color: var(--white);
+  top: 70vh;
+  left: 0vw;
+  text-align: center;
+  padding-left: 15%;
 }
 
 @keyframes float {
@@ -151,12 +194,16 @@ h3 {
 
 }
 
-.header-bas-page {
-  position: relative;
-  top: 50%;
+.projet {
+  width: 70vw;
+  position: absolute;
+  color: var(--white);
+  top: 92vh;
+  left: 0vw;
+  text-align: center;
+  padding-left: 15%;
 }
-
-
+ 
 
 /* -- MAIN -- */
 
@@ -202,6 +249,8 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   top: 20vh;
   right: 20vw;
 }
+
+
 
 /* -- CHPT2 -- */
 
@@ -542,10 +591,10 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 #chapitre-06 .sprite-sheet-poisson{
   position: absolute;
-  width:5vw;
+  width:10vw;
   transform-origin: bottom center;
-  top: vh;
-  left: 93vw;
+  top: 50vh;
+  left: 88vw;
 }
 
 
@@ -595,6 +644,11 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   z-index: 1;
 }
 
+#chapitre-06 #morphing { 
+  background: url(https://lorempixel.com/1500/700) no-repeat 50% 50%; background-size: cover; position: relative; height: 100vh; 
+}
+
+#chapitre-06 #morphing svg { width: 100%; height: auto; position: absolute; bottom: 0; }
 
 /* -- CHPT7 -- */
 
@@ -663,6 +717,74 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   
 }
 
+
+#svg1{
+  position: absolute;
+  display: flex;
+  width:400px;
+  height: 400px;
+  top: 30vh;
+  left: 10vw;
+}
+
+
+#etoile {
+  visibility:hidden;
+}
+
+
+#svg2 {
+  position: absolute;
+  display: flex;
+  width:300px;
+  height: 300px;
+  top: 10vh;
+  left: 40vw;
+}
+
+#etoiles {
+  visibility:hidden;
+}
+
+
+#svg3 {
+  position: absolute;
+  display: flex;
+  width:200px;
+  height: 200px;
+  top: 60vh;
+  left: 80vw;
+}
+
+#etoiless {
+  visibility:hidden;
+}
+
+#svg4 {
+  position: absolute;
+  display: flex;
+  width:350px;
+  height: 350px;
+  top: 70vh;
+  left: 30vw;
+}
+
+#etoilesss {
+  visibility:hidden;
+}
+
+#svg5 {
+  position: absolute;
+  display: flex;
+  width:500px;
+  height: 500px;
+  top: 20vh;
+  left: 80vw;
+}
+
+#etoilessss {
+  visibility:hidden;
+}
 /* --FOOTER-- */
 
 .texte-footer{
@@ -699,25 +821,18 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 }
 
 
-
-.sprite-sheet-poisson{
+.sprite-sheet-poisson {
   background-image: url(../media/img/img_elements_visuels/spritesheet_poisson.png);
   width: 50vw;
   aspect-ratio: 1/1;
   background-size: 7200% 100%;
-  animation-name: poisson;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(71);
-  animation-play-state: paused;
+}
+
+.is-scrolling .sprite-sheet-poisson {
+  animation: poisson 2s steps(71) infinite;
 }
 
 @keyframes poisson {
   from { background-position: 0 0; }
   to { background-position: -100% 0; }
 }
-
-.body-sprite-sheets.is-scrolling .sprite-sheets-poisson {
-  animation-play-state: running;
-}
-
