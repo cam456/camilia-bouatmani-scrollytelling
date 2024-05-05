@@ -1,133 +1,303 @@
-//INDEX
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(MotionPathPlugin)
+/*---HEADER---*/
 
-
-const intro = document.querySelector('#intro');
-const chapitre1 = document.querySelector('#chpt1');
-const chapitre2 = document.querySelector('#chpt2');
-const chapitre3 = document.querySelector('#chpt3');
-const chapitre4 = document.querySelector('#chpt4');
-const chapitre5 = document.querySelector('#chpt5');
-const chapitre6 = document.querySelector('#chpt6');
-const chapitre7 = document.querySelector('#chpt7');
-const chapitre8 = document.querySelector('#chpt8');
-const bodyIndex = document.querySelector('body');
-const chap1SpriteChat = document.querySelector('#chpt1.blinkfloat');
-const fleche1 = document.querySelector('fleche');
-
-
-
-
-const techniqueGsap = document.querySelector('.technique-gsap');
-let scrollIndex;
-if (techniqueGsap != null) {
-    window.addEventListener('scroll', () => {
-    });
-
-    function removeClassIsScrolling() {
-      bodyIndex.classList.remove('is-scrolling');
-    }
-}
-
-gsap.to(".intro", {
-    scrollTrigger: {
-        pin: true,
-      scrub: true,
-      markers: true,
-      trigger: ".intro",
-    }
-});
-    
-
-  gsap.to('.chpt1', {
-    scrollTrigger: {
-      trigger: '.chpt1',
-      start: '50% 75%',
-      end: '50% 25%',
-      markers: true,
-      scrub: 0.25,
-    },
-    x: '100%',
-    duration: 2,
+gsap.to(".down", { 
+    duration: 4,
+    y: '40',
+    repeat: -1,
   });
+
+/*---CHPT1---*/
+const chpt1 = document.querySelector("#chapitre-01");
+
+gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: "#chapitre-01",
+    start: "top top",
+    end: "bottom bottom",
+    pin: true,
+    scrub: true
+});
+
+gsap.timeline({repeat: 5})
+  .from("#chapitre-01 .planete", { duration: 3, scale: 0})
+  .to("#chapitre-01 .planete", { duration: 5,});
+
+gsap.timeline({repeat: 5})
+  .from("#chapitre-01 .chat-orange", { duration: 3, x: "100%", y: "100%"})
+  .to("#chapitre-01 .chat-orange", { duration: 5, x: "-200%", y: "100%", scale: 0.5});
+
+
+
+/*---CHPT2---*/
+
+const chpt2 = document.querySelector("#chapitre-02");
+const chat2 = document.querySelector('#chat2');
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-02 .chat-orange", { duration: 3, x: "50%", })
+  .to("#chapitre-02 .chat-orange", { duration: 3, x: "100%", })
+  .to("#chapitre-02 .chat-orange", { duration: 3, x: "50%", });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chat2 = document.querySelector('#chat2');
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(chat2, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#chapitre-02",
+        start: "10vh",
+        end: "650vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(chat2, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-03",
+        start: "650vh",
+        end: "651vh", // 
+        scrub: true
+      }
+    });
+  });
+
+/*---CHPT3---*/
+
+const bulles = document.querySelector("#bulles");
+const chpt3 = document.querySelector("#chapitre-03");
+const chat3 = document.querySelector('#chat3');
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-03 .chat3", { duration: 3, y: "-10%", })
+  .to("#chapitre-03 .chat3", { duration: 3, y: "10%", })
+  .to("#chapitre-03 .chat3", { duration: 3, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-03 .bulles", { duration: 5, y: "-10%", })
+  .to("#chapitre-03 .bulles", { duration: 5, y: "10%", })
+  .to("#chapitre-03 .bulles", { duration: 5, y: "-10%", });
  
 
-
-  //chpt1
-
-  if (!CSS.supports('animation-timeline: scroll()') && matchMedia('(prefers-reduced-motion: no-preference)')) {
-    gsap.registerPlugin(ScrollTrigger)
+document.addEventListener("DOMContentLoaded", function() {
+const chat3 = document.querySelector('#chat3');
   
-    const scrub = 0.2
-    const trigger = 'intro'
-  
-    gsap.set('p > span', {
-      '--progress': 0,
-      backgroundPositionX: 'calc(-100vmax + (var(--progress) * 100vmax)), calc(-100vmax + (var(--progress) * 100vmax)), 0',
-      color: 'transparent',
-    })
-    gsap.to('p > span', {
-      '--progress': 1,
-        duration: 40,
-        scrollTrigger: {
-        pin: true,
-        trigger: '#chpt1',
-        scrub,
-        start: 'top 10%',
-        end: '150% 0',
-      }
-    })
-    gsap.to('p > span', {
-    duration: 40,
-      color: 'white',
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(chat3, {
+      xPercent: 900, 
       scrollTrigger: {
-        trigger: '#chpt1',
-        pin: true,
-        scrub,
-        start: 'top 0%',
-        end: '180% 5%',
+        trigger: "#chapitre-03",
+        pin: true, 
+        start: "top top", 
+        end: "+=200%", 
+        scrub: true 
       }
-    })
-  }
+    });
+  });
 
-  let timeline1 = gsap.timeline({
-    duration: 40,
-    scrollTrigger: {
-        markers: true,
-        scrub: true,
-        trigger: '#chpt1',
-        start: 'top 10%',
-        end: '150% 0',
-        toggleActions: 'play pause reverse pause',
-    }
-}).to('#chapitre1', {
-    backgroundPosition: "-10% 0",
-    ease: "ease.out",
-    scrollTrigger: {
-        markers: true,
-        scrub: true,
-        trigger: '#chpt1',
-        start: 'top 0%',
-        end: '180% 5%',
-        pin: true,
-    }
-})
+/*---CHPT4---*/
+
+const chpt4 = document.querySelector("#chapitre-04");
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-04 .chat4", { duration: 3, y: "-10%", })
+  .to("#chapitre-04 .chat4", { duration: 4, y: "10%", })
+  .to("#chapitre-04 .chat4", { duration: 3, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-04 .bulles2", { duration: 5, y: "-10%", })
+  .to("#chapitre-04 .bulles2", { duration: 4, y: "10%", })
+  .to("#chapitre-04 .bulles2", { duration: 5, y: "-10%", });
+ 
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-04 .poisson-bleu-orange", { duration: 7, y: "-10%", })
+  .to("#chapitre-04 .poisson-bleu-orange", { duration: 8, y: "10%", })
+  .to("#chapitre-04 .poisson-bleu-orange", { duration: 7, y: "-10%", });
 
 
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-04 .poisson-rose", { duration: 9, y: "-10%", })
+  .to("#chapitre-04 .poisson-rose", { duration: 7, y: "10%", })
+  .to("#chapitre-04 .poisson-rose", { duration: 9, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-04 .poisson-bleu-foncer", { duration: 5, y: "-10%", })
+  .to("#chapitre-04 .poisson-bleu-foncer", { duration: 3, y: "10%", })
+  .to("#chapitre-04 .poisson-bleu-foncer", { duration: 7, y: "-10%", });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chat4 = document.querySelector('#chat4');
+      
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(chat4, {
+          xPercent: 900, 
+          scrollTrigger: {
+            trigger: "#chapitre-04",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+
+          }
+          
+        });
+        const poisson1 = document.querySelector('#poisson1')
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(poisson1, {
+          xPercent: -400, 
+          scrollTrigger: {
+            trigger: "#chapitre-04",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+
+          }
+          
+        });
+
+        const poisson2 = document.querySelector('#poisson2')
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(poisson2, {
+          xPercent: 500, 
+          scrollTrigger: {
+            trigger: "#chapitre-04",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+
+          }
+          
+        });
+
+        const poisson3 = document.querySelector('#poisson3')
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(poisson3, {
+          xPercent: -600, 
+          scrollTrigger: {
+            trigger: "#chapitre-04",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+
+          }
+          
+        });
+
+
+      });
+
+/*---CHPT5---*/
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-05 .bulles3", { duration: 5, y: "-10%", })
+  .to("#chapitre-05 .bulles3", { duration: 4, y: "10%", })
+  .to("#chapitre-05 .bulles3", { duration: 5, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-05 .chat5", { duration: 3, y: "-10%", })
+  .to("#chapitre-05 .chat5", { duration: 4, y: "10%", })
+  .to("#chapitre-05 .chat5", { duration: 3, y: "-10%", });
+
+  const chpt5 = document.querySelector("#chapitre-05");
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    const chat5 = document.querySelector('#chat5');
+      
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(chat5, {
+          xPercent: -200, 
+          scrollTrigger: {
+            trigger: "#chapitre-05",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+          }
+        });
+      });
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const raie = document.querySelector('#raie');
+      
+        gsap.registerPlugin(ScrollTrigger);
+      
+        gsap.to(raie, {
+          xPercent: 100,
+          rotation: 180, 
+          yPercent: -160, 
+          scrollTrigger: {
+            trigger: "#chapitre-05",
+            pin: true,
+            start: "top top",
+            end: "+=200%",
+            scrub: true
+          }
+        });
+      });
+
+
+/*---CHPT6---*/
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-06 .bulles4", { duration: 5, y: "-10%", })
+  .to("#chapitre-06 .bulles4", { duration: 4, y: "10%", })
+  .to("#chapitre-06 .bulles4", { duration: 5, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-06 .chat6", { duration: 3, y: "-10%", })
+  .to("#chapitre-06 .chat6", { duration: 4, y: "10%", })
+  .to("#chapitre-06 .chat6", { duration: 3, y: "-10%", });
+
+gsap.timeline({repeat: Infinity})
+  .from("#chapitre-06 .personnage-mauve", { duration: 2, y: "-10%", })
+  .to("#chapitre-06 .personnage-mauve", { duration: 5, y: "5%", })
+  .to("#chapitre-06 .personnage-mauve", { duration: 3, y: "-10%", });
+
+  const chpt6 = document.querySelector("#chapitre-06");
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    const chat6 = document.querySelector('#chat6');
+      
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(chat6, {
+          xPercent: 180, 
+          scrollTrigger: {
+            trigger: "#chapitre-06",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+          }
+        });
+
+        const persomauve1 = document.querySelector('#persomauve1')
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(persomauve1, {
+          xPercent: -200, 
+          scrollTrigger: {
+            trigger: "#chapitre-06",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: true 
+
+          }
+          
+        });
+
+      });
+
+/*---CHPT7---*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+/*---CHPT8---*/
 

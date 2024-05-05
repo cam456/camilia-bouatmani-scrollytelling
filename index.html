@@ -1,189 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAT DANS L'ESPACE</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"
-    ></script>
-   <!-- HEADER-->
-    <header class="intro" id="intro">
-        <ul class="technique-gsap"> 
-            <li>scrollTrigger</li> 
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESPACE CHATON</title>
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!---INTRO--->
+    <header>
+        <h1 class="titre">ESPACE CHATON</h1>
+        <div class="header-bas-page">
+        <img class="chat1" src="./media/img/img_personnages/chat/chat1.png" alt="">
+        <p class="description"> UN CHAT PERDU DANS L'ESPACE DÉCOUVRE L'ESPACE ET VISITE UNE PLANETE MERVEILLEUSE</p>
+        <h1 class="down">Défilez la page</h1>
+        <p class="texte-footer">Projet scrollytelling créé dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency. </br>© 2024 - Conception : Audrey Dandurand et Camilia Bouatmani | Développement Web : Camilia Bouatmani</p></div>
+    </header>
+    <!---FIN INTRO--->
+    <main>
+        <!---CHPT1--->
+        <section id="chapitre-01">
+          <ul class="technique-gsap"> 
+            <li>Timeline planète 
+              <ul> 
+                  <li>Scale</li> 
+                  <li>Translation x/y et scale</li> 
+              </ul> 
+            </li> 
+            <li>Timeline chat
+              <ul> 
+                  <li>Translation x/y</li> 
+                  <li>Translation x/y et scale</li> 
+              </ul> 
+            </li>
+            <li>Timeline étoiles
+              <ul> 
+                  <li>Scale</li> 
+              </ul> 
+            </li>
+            <li>scrollTrigger 
                 <ul> 
-                    <li>pin true</li> 
-                    <li></li> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
                 </ul> 
             </li> 
-        </ul>
-        <div id="titre" class="row justify-content-center">
-            <h1>ESPACE CHATON </h1>
-        </div>
-       
-
-        <div class="description">
-            <p> UN CHAT PERDU DANS L'ESPACE DÉCOUVRE L'ESPACE ET VISITE UNE PLANETE MERVEILLEUSE</p>
-        </div>
-        
+          </ul>
+          <p class="texte-chapitre-01">Le chaton est perdu dans l'espace quand tout a coup il d'écouvre une planete d'ocean!</p>
+          <img class="chat-orange" alt="chat" src="/media/img/img_personnages/chat/fall1.png">
+          <img class="planete" alt="planete" src="/media/img/img_elements_visuels/planete.png">
     
- 
-        <div class="down"> 
-            <h1 id="fleche" class="fleche1">scroll down</h1>
-        </div>
-           
-       
+        </section>
+        <!---FIN CHPT1--->
 
-        <div class="projet">
-            <p> Projet scrollytelling dasn le cadre du cours optimisation web</p>
-        </div>
-    </header>
-    <!-- MAIN -->
-    <main>
-        <!-- CHAPTER1 -->
-        <section class="section" id="chpt1">
+        <!---CHPT2--->
+        <section id="chapitre-02">
             <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger</li> 
-                        <li></li> 
-                    </ul> 
-                </li> 
+              <li>...</li> 
+              <li>...</li> 
+              <li>scrollTrigger 
+                <ul> 
+                  <li>trigger=</li> 
+                  <li>...</li> 
+                </ul> 
+              </li> 
             </ul>
+            <img class="parallax-eau" alt="eau" src="/img/img_arriere_plan/parallax_eau_fond.svg">
+            <img id="chat2" class="chat-orange" alt="chat" src="/media/img/img_personnages/chat/fall1.png">
+            <p class="texte-chapitre-02">Il commence à tomber et tomber jusqu'à l'eau</p>
+          </section>
+          <!---FIN CHPT2--->
+      
+        <!---CHPT3--->
 
+        <section id="chapitre-03">
+          <ul class="technique-gsap"> 
+            <li>Scale et translation y bulles</li> 
+            <li>...</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+          </ul>
+          <img class="bulles" alt="bulles" src="/media/img/img_elements_visuels/bulles.png">
+          <img class="algue" alt="algue verte" src="/media/img/img_elements_visuels/coraux/coraux4.png">
+          <img class="algue2" alt="algue verte" src="/media/img/img_elements_visuels/coraux/coraux4.png">
+          <img class="coraux-bleu" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux3.png">
+          <img class="coraux-bleu2" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux3.png">
+          <img class="coraux-tube-roche" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux8.png">
+          <img id="chat3" class="chat3" alt="chat" src="/media/img/img_personnages/chat/floatcat1.png">
+          <p class="texte-chapitre-03">blah blah blah</p>
+        </section>
+        <!---FIN CHPT3--->
+       
+        <!---CHPT4--->
 
+        <section id="chapitre-04">
+          <ul class="technique-gsap"> 
+            <li>Scale et translation y bulles</li> 
+            <li>Rotation corail mauve</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+          </ul>
+          <img class="bulles2" alt="bulles2" src="/media/img/img_elements_visuels/bulles.png">
+          <img class="algue4" alt="algue verte" src="/media/img/img_elements_visuels/coraux/coraux4.png">
+          <img class="algue5" alt="algue verte" src="/media/img/img_elements_visuels/coraux/coraux4.png">
+          <img id="poisson1" class="poisson-bleu-orange" alt="poisson" src="/media/img/img_elements_visuels/poisson/poisson2.png">
+          <img id="poisson2" class="poisson-rose" alt="poisson" src="/media/img/img_elements_visuels/poisson/poisson4.png">
+          <img id="poisson3" class="poisson-bleu-foncer" src="/media/img/img_elements_visuels/poisson/poisson8.png" alt="poisson">
+          <img class="coraux-mauve" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux2.png">
+          <img class="coraux-mauve2" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux2.png">
+          <img class="coraux-tube" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux1.png">
+          <img id="chat4" class="chat4" alt="chat" src="/media/img/img_personnages/chat/floatcat1.png">
+          <p class="texte-chapitre-04">blah blah vlah</p>
+        </section>
+        <!---FIN CHPT4--->
+     
+        <!---CHPT5--->
+
+        <section id="chapitre-05">
+          <ul class="technique-gsap"> 
+            <li></li> 
+            <li></li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+          </ul>
+          <img class="bulles3" alt="bulles3" src="/media/img/img_elements_visuels/bulles.png">
+          <img class="roche" alt="roche" src="/media/img/img_elements_visuels/roche.png">
+          <img class="roche2" alt="roche2" src="/media/img/img_elements_visuels/roche.png">
+          <img class="coraux-bleu-vert2" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux9.png">
+          <img class="coraux-bleu-vert" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux9.png">
+          <img class="coraux-mauve-rose-bleu" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux6.png">
+          <img id="raie" class="raie" alt="raie" src="/media/img/img_elements_visuels/poisson/raie_dessous.png">
+          <img id="chat5" class="chat5" alt="chat" src="/media/img/img_personnages/chat/cat1.png">
+          <p class="texte-chapitre-05">blahblahlbah</p>
+        </section>
+        <!---FIN CHPT5--->
+
+        <!---CHPT6--->
+        <section id="chapitre-06">
+          <ul class="technique-gsap"> 
+            <li>Transition y personnage</li>
+            <li>Transition x personnage</li> 
+            <li>...</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+          </ul>
+          <img class="bulles4" alt="bulles4" src="/media/img/img_elements_visuels/bulles.png">
+          <img id="chat6" class="chat6" alt="chat" src="/media/img/img_personnages/chat/floatcat1.png">
+          <img class="algue6" alt="algue verte" src="/media/img/img_elements_visuels/coraux/coraux4.png">
+          <img class="roche3" alt="roche" src="/media/img/img_elements_visuels/roches2.png">
+          <img class="algue7" alt="algue verte" src="/media/img/img_elements_visuels/coraux/coraux4.png">
+          <img class="coraux-bleu3" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux3.png">
+          <img id="persomauve1" class="personnage-mauve" alt="personnage" src="/media/img/img_personnages/littleguy/littleguyside.png">
+          <img class="coraux-tube-roche" alt="coraux" src="/media/img/img_elements_visuels/coraux/coraux8.png">
+          <p class="texte-chapitre-06">blah blah blah bka</p>
+        </section>
+        <!---FIN CHPT6--->
+
+        <!---CHPT7--->
+        <section id="chapitre-07">
+          <ul class="technique-gsap"> 
+            <li>...</li> 
+            <li>...</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+          </ul>
+          
+          <p class="texte-chapitre-07"> blahblahlbah</p>
+        </section>
+        <!--- FIN CHPT7--->
+      
+        <!---CHPT8--->
+        <section id="chapitre-08">
+          <ul class="technique-gsap"> 
+            <li>Timeline étoiles 
+              <ul> 
+                  <li>Scale</li> 
+              </ul> 
+            </li> 
+            <li>Scale</li> 
+            <li>...</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+          </ul>
          
-            <div class="textBox" id="chpt1text1">
-               
-                  <p>
-                    <span contenteditable=true>Le petit chat remarque une planete au loin</span>
-                  </p>
-            </div>
-            <div class="blinkfloat"></div>
-            <div class="planete"></div>
+          <img class="chat-orange" alt="chat" src="/media/img/img_personnages/chat/cat1.png">
+          <p class="texte-chapitre-08"> blah blah blah</p>
         </section>
-
-        <!-- CHAPTER2 -->
-        <section class="section" id="chpt2">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
-
-        </section>
-
-        <!-- CHAPTER3 -->
-        <section class="section" id="chpt3">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
-        </section>
-
-        <!-- CHAPTER4 -->
-        <section class="section" id="chpt4">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
-        </section>
-
-        <!-- CHAPTER5 -->
-        <section class="section" id="chpt5">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
-        </section>
-
-        <!-- CHAPTER6 -->
-        <section class="section" id="chpt6">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>  
-        </section>
-
-        <!-- CHAPTER7 -->
-        <section class="section" id="chpt7">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
-        </section>
-
-        <!-- CHAPTER8 -->
-        <section class="section" id="chpt8">
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
-        </section>
-
+        <!--- FIN CHPT8--->
     </main>
-
-    <!-- FOOTER -->
     <footer>
-        <p><em>@ 2024 - Conception :</em> Camilia Bouatmani & Audrey Dandurand<em>| Développement Web :</em> Camilia Bouatmani</p>
+        <p>Projet scrollytelling créé dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency.</p>
+        <p>© 2024 - Conception : Audrey Dandurand et Camilia Bouatmani | Développement Web : Camilia Bouatmani</p>
     </footer>
-    
-
-</body>
-    <script src="./script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TextPlugin3.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <link href="../scss/custom_bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
