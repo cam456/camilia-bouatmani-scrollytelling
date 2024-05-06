@@ -159,7 +159,8 @@ const chat3 = document.querySelector('#chat3');
         drawSVG: "0% 100%",
         duration: 5,
         opacity: 0.5,
-        ease: "power1.inOut"
+        ease: "power1.inOut",
+        toggleAction: "restart complete reverse reset",
       }
     );
   }
@@ -222,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const poisson1 = document.querySelector('#poisson1')
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(poisson1, {
-          xPercent: -400, 
+          xPercent: -450, 
           scrollTrigger: {
             trigger: "#chapitre-04",
             pin: true, 
@@ -252,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const poisson3 = document.querySelector('#poisson3')
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(poisson3, {
-          xPercent: -600, 
+          xPercent: -880, 
           scrollTrigger: {
             trigger: "#chapitre-04",
             pin: true, 
@@ -319,7 +320,7 @@ gsap.timeline({repeat: Infinity})
               document.querySelector('.sprite-sheet-poisson').style.animationPlayState = 'running';
             },
             onLeaveBack: function() {
-                document.querySelector('.sprite-sheet-poisson').style.animationPlayState = 'paused';
+              document.querySelector('.sprite-sheet-poisson').style.animationPlayState = 'paused';
             }
           }
         });
@@ -403,26 +404,17 @@ gsap.timeline({repeat: Infinity})
 
       });
 
-      document.addEventListener("DOMContentLoaded", function() {
-        const poissonElement = document.querySelector('.sprite-sheet-poisson');
-    
-        gsap.registerPlugin(ScrollTrigger);
-    
-        gsap.to(poissonElement, {
-            scrollTrigger: {
-                trigger: "#chapitre-06",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: true,
-            },
-            onComplete: function() {
-                poissonElement.classList.add('is-scrolling');
-            },
-            onReverseComplete: function() {
-                poissonElement.classList.remove('is-scrolling');
-            }
-        });
-    });
+      let timer; 
+          
+          window.addEventListener("scroll", () => {
+            document.body.classList.remove("is-scrolling");
+
+            clearTimeout(timer);
+
+            timer = setTimeout(function(){
+              document.body.classList.remove("is-scrolling");
+            }, 100);
+          }); 
    
   
 /*---CHPT7---*/

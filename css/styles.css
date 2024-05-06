@@ -591,8 +591,12 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 
 
-
-
+body.is-scrolling .sprite-sheet-poisson{
+  animation-play-state: running;
+}
+body.is-scrolling .sprite-sheet-plante{
+  animation-play-state: running;
+}
 /* -- CHPT6 -- */
 #chapitre-06 {
   position: relative;
@@ -859,7 +863,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   height: 300vh;
 }
 
-.sprite-sheet-plante {
+body .sprite-sheet-plante {
   background-image: url(../media/img/img_elements_visuels/spritesheet_plante_2.png);
   width: 50vw;
   aspect-ratio: 1/1;
@@ -876,7 +880,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 }
 
 
-.sprite-sheet-poisson {
+body .sprite-sheet-poisson {
   background-image: url(../media/img/img_elements_visuels/spritesheet_poisson.png);
   width: 50vw;
   aspect-ratio: 1/1;
@@ -893,3 +897,6 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   from { background-position: 0 0; }
   to { background-position: -100% 0; }
 }
+
+
+
