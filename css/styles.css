@@ -727,6 +727,18 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   width: 100%;
 }
 
+#svg7 {
+  position: absolute;
+  display: flex;
+  width: 5000px;
+  height: 300px;
+  top: 26vh;
+  left: -105vh;
+}
+
+#motionpath {
+  opacity: 0;
+}
 
 /* -- CHPT8 -- */
 #chapitre-08 {

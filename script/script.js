@@ -387,11 +387,13 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-07 .chat7", { duration: 4, y: "10%", })
   .to("#chapitre-07 .chat7", { duration: 3, y: "-10%", });
 
+gsap.to('#chapitre-07 .personnage-mauve', {
+    motionPath: '#motionpath',
+    duration: 4,
+    repeat: -1,
+    yoyo: true,
+})
 
-gsap.timeline({repeat: Infinity})
-  .from("#chapitre-07 .personnage-mauve", { duration: 3, y: "-10%", })
-  .to("#chapitre-07 .personnage-mauve", { duration: 4, y: "10%", })
-  .to("#chapitre-07 .personnage-mauve", { duration: 3, y: "-10%", });
 
   document.addEventListener("DOMContentLoaded", function() {
     const chat7 = document.querySelector('#chat7');
