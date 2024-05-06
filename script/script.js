@@ -138,6 +138,17 @@ const chat3 = document.querySelector('#chat3');
       }
     });
 
+    gsap.fromTo(
+      "#vector",
+      { drawSVG: "0% 0%", opacity: 0 },
+      {
+        drawSVG: "0% 100%",
+        duration: 5,
+        opacity: 0.5,
+        ease: "power1.inOut"
+      }
+    );
+
   });
 
   function anim6() {
@@ -347,7 +358,7 @@ gsap.timeline({repeat: Infinity})
       
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(chat6, {
-          xPercent: 180, 
+          xPercent: 140, 
           scrollTrigger: {
             trigger: "#chapitre-06",
             pin: true, 
@@ -360,7 +371,7 @@ gsap.timeline({repeat: Infinity})
         const persomauve1 = document.querySelector('#persomauve1')
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(persomauve1, {
-          xPercent: -200, 
+          xPercent: -170, 
           scrollTrigger: {
             trigger: "#chapitre-06",
             pin: true, 

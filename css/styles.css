@@ -591,6 +591,8 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 
 
+
+
 /* -- CHPT6 -- */
 #chapitre-06 {
   position: relative;
@@ -866,16 +868,11 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(21);
-  animation-play-state: paused;
 }
 
 @keyframes plante {
   from { background-position: 0 0; }
   to { background-position: -100% 0; }
-}
-
-.body-sprite-sheets.is-scrolling .sprite-sheets-plante {
-  animation-play-state: running;
 }
 
 
@@ -884,11 +881,12 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   width: 50vw;
   aspect-ratio: 1/1;
   background-size: 7200% 100%;
+  animation-name: plante;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(71);
 }
 
-.is-scrolling .sprite-sheet-poisson {
-  animation: poisson 2s steps(71) infinite;
-}
 
 @keyframes poisson {
   from { background-position: 0 0; }
