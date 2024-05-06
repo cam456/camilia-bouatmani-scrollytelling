@@ -885,6 +885,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(71);
+  animation-play-state: paused;
 }
 
 

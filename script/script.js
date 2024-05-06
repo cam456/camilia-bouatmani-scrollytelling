@@ -306,6 +306,23 @@ gsap.timeline({repeat: Infinity})
             scrub: true 
           }
         });
+
+        const spritepoisson = document.querySelector('#sprite-sheet-poisson');
+        gsap.to(spritepoisson, {
+          scrollTrigger: {
+            trigger: "#chapitre-05",
+            pin: true, 
+            start: "top top", 
+            end: "+=200%", 
+            scrub: 1, 
+            onEnter: function() {
+              document.querySelector('.sprite-sheet-poisson').style.animationPlayState = 'running';
+            },
+            onLeaveBack: function() {
+                document.querySelector('.sprite-sheet-poisson').style.animationPlayState = 'paused';
+            }
+          }
+        });
       });
 
 
