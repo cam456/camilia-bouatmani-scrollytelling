@@ -81,6 +81,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const textchpt2 = document.querySelector('#textchpt2');
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(textchpt2, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#chapitre-02",
+        start: "10vh",
+        end: "650vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(textchpt2, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-03",
+        start: "650vh",
+        end: "651vh", // 
+        scrub: true
+      }
+    });
+  });
 /*---CHPT3---*/
 
 const bulles = document.querySelector("#bulles");
@@ -372,11 +397,9 @@ gsap.timeline({repeat: Infinity})
     });
    
   
-      
-
-
-
 /*---CHPT7---*/
+
+
 gsap.timeline({repeat: Infinity})
   .from("#chapitre-07 .bulles5", { duration: 5, y: "-10%", })
   .to("#chapitre-07 .bulles5", { duration: 4, y: "10%", })
@@ -387,12 +410,13 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-07 .chat7", { duration: 4, y: "10%", })
   .to("#chapitre-07 .chat7", { duration: 3, y: "-10%", });
 
+
 gsap.to('#chapitre-07 .personnage-mauve', {
     motionPath: '#motionpath',
-    duration: 4,
+    duration: 5,
     repeat: -1,
     yoyo: true,
-})
+});
 
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -422,9 +446,32 @@ gsap.to('#chapitre-07 .personnage-mauve', {
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-    const sable = document.querySelector('#sable');
+    const textchpt7 = document.querySelector('#textchpt7');
   
     gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(textchpt7, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#chapitre-07",
+        start: "5vh",
+        end: "650vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(textchpt7, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-08",
+        start: "650vh",
+        end: "651vh", 
+        scrub: true
+      }
+    });
+
+    const sable = document.querySelector('#sable');
+  
   
     gsap.to(sable, {
       opacity: 1,
@@ -441,11 +488,17 @@ gsap.to('#chapitre-07 .personnage-mauve', {
       scrollTrigger: {
         trigger: "#chapitre-07",
         start: "15vh",
-        end: "16vh", // 
+        end: "16vh",  
         scrub: true
       }
     });
+
+
   });
+
+
+ 
+
 
 
 

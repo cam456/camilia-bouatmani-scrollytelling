@@ -264,11 +264,15 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 #chapitre-02 p{
   width: 70vw;
-  position: absolute;
-  color:red;
+  position: fixed;
+  color:var(--Topaz);
   top: 5vh;
   text-align: center;
   padding-left: 15%;
+}
+
+#textchpt2{
+  opacity: 0; 
 }
 
 
@@ -324,7 +328,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   padding-left: 15%;
   width: 70vw;
   position: absolute;
-  color: red;
+  color: var(--bleu);
   top: 5vh;
 }
 
@@ -410,7 +414,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 #chapitre-04 p{
   width: 70vw;
   position: absolute;
-  color: red;
+  color: var(--bleu);
   top: 5vh;
   text-align: center;
   padding-left: 15%;
@@ -516,7 +520,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   text-align: center;
   padding-left: 15%;
   width: 70vw;
-  color: red;
+  color: var(--bleu);
 }
 
 #chapitre-05 .bulles3{
@@ -601,7 +605,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 #chapitre-06 p{
   width: 70vw;
   position: absolute;
-  color: red;
+  color: var(--bleu);
   top: 5vh;
   text-align: center;
   padding-left: 15%;
@@ -715,11 +719,16 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 #chapitre-07 p{
   width: 70vw;
-  position: absolute;
-  color: var(--marine);
+  position: fixed;
+  color: var(--bleu);
   top: 5vh;
   text-align: center;
   padding-left: 15%;
+}
+
+#textchpt7{
+  opacity: 0; 
+  z-index: 1;
 }
 
 #chapitre-07 .sable{
@@ -759,7 +768,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 #chapitre-08 p{
   width: 70vw;
   position: absolute;
-  color: red;
+  color: var(--Topaz);
   top: 5vh;
   text-align: center;
   padding-left: 15%;
