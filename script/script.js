@@ -358,10 +358,7 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-06 .chat6", { duration: 4, y: "10%", })
   .to("#chapitre-06 .chat6", { duration: 3, y: "-10%", });
 
-  gsap.timeline({repeat: Infinity})
-  .from("#chapitre-06 .sprite-sheet-poisson", { duration: 2, y: "-10%", })
-  .to("#chapitre-06 .sprite-sheet-poisson", { duration: 2, y: "10%", })
-  .to("#chapitre-06 .sprite-sheet-poisson", { duration: 5, y: "-10%", });
+  
 
 gsap.timeline({repeat: Infinity})
   .from("#chapitre-06 .personnage-mauve", { duration: 2, y: "-10%", })
@@ -415,6 +412,9 @@ gsap.timeline({repeat: Infinity})
               document.body.classList.remove("is-scrolling");
             }, 100);
           }); 
+
+
+        
    
   
 /*---CHPT7---*/

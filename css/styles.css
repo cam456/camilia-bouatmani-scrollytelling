@@ -863,7 +863,7 @@ body.is-scrolling .sprite-sheet-plante{
   height: 300vh;
 }
 
-body .sprite-sheet-plante {
+.sprite-sheet-plante {
   background-image: url(../media/img/img_elements_visuels/spritesheet_plante_2.png);
   width: 50vw;
   aspect-ratio: 1/1;
@@ -880,7 +880,7 @@ body .sprite-sheet-plante {
 }
 
 
-body .sprite-sheet-poisson {
+.sprite-sheet-poisson {
   background-image: url(../media/img/img_elements_visuels/spritesheet_poisson.png);
   width: 50vw;
   aspect-ratio: 1/1;
