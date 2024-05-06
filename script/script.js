@@ -112,6 +112,28 @@ const chat3 = document.querySelector('#chat3');
         scrub: true 
       }
     });
+
+  });
+
+  function anim6() {
+    gsap.fromTo(
+      "#vector",
+      { drawSVG: "0% 0%", opacity: 0 },
+      {
+        drawSVG: "0% 100%",
+        duration: 5,
+        opacity: 0.5,
+        ease: "power1.inOut"
+      }
+    );
+  }
+  
+  ScrollTrigger.create({
+    trigger: "#chapitre-03",
+    start: "top top",
+    end: "+=200%",
+    onEnter: anim6,
+    scrub: true
   });
 
 /*---CHPT4---*/
@@ -392,6 +414,32 @@ gsap.timeline({repeat: Infinity})
         trigger: "#chapitre-08",
         start: "650vh",
         end: "651vh", // 
+        scrub: true
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const sable = document.querySelector('#sable');
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(sable, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#chapitre-07",
+        start: "0vh",
+        end: "15vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(sable, {
+      opacity: 0.5,
+      scrollTrigger: {
+        trigger: "#chapitre-07",
+        start: "15vh",
+        end: "16vh", // 
         scrub: true
       }
     });

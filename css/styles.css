@@ -284,6 +284,30 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   opacity: 0; 
 }
 
+#svg6 {
+  position: absolute;
+  display: flex;
+  width: 2200px;
+  height: 1900px;
+  top: 30vh;
+}
+#template,
+#vector {
+  fill: none;
+}
+#template {
+  stroke-width: 1px;
+  stroke: #444455;
+  opacity: 0;
+}
+#vector {
+  opacity: 0.5;
+  stroke: var(--bleu);
+  stroke-width: 3px;
+  stroke-dashoffset: 0.001;
+  stroke-dasharray: 0px, 999999px;
+}
+
 /* -- CHPT3 -- */
 
 #chapitre-03 {
@@ -682,6 +706,13 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   z-index: 1;
 }
 
+#chapitre-07 .bulles5 {
+  position: absolute;
+  top: 17vh;
+  left: 2vw;
+}
+
+
 #chapitre-07 p{
   width: 70vw;
   position: absolute;
@@ -690,6 +721,12 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   text-align: center;
   padding-left: 15%;
 }
+
+#chapitre-07 .sable{
+  transform: scaleY(-1);
+  width: 100%;
+}
+
 
 /* -- CHPT8 -- */
 #chapitre-08 {
