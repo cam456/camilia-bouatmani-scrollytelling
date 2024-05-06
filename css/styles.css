@@ -589,14 +589,6 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   transform: scaleX(-1);
 }
 
-
-
-body.is-scrolling .sprite-sheet-poisson{
-  animation-play-state: running;
-}
-body.is-scrolling .sprite-sheet-plante{
-  animation-play-state: running;
-}
 /* -- CHPT6 -- */
 #chapitre-06 {
   position: relative;
@@ -900,3 +892,9 @@ body.is-scrolling .sprite-sheet-plante{
 
 
 
+body.is-scrolling .sprite-sheet-poisson{
+  animation-play-state: running;
+}
+body.is-scrolling .sprite-sheet-plante{
+  animation-play-state: running;
+}
