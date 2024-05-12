@@ -417,7 +417,21 @@ gsap.timeline({repeat: Infinity})
           }); 
 
 
-        
+          gsap.to('#chapitre-06 .sprite-sheets-poisson', {
+            motionPath: {
+              align: '#courbe',
+              path: '#courbe',
+              alignOrigin: [0.5, 0.5]
+            },
+            scrollTrigger: {
+              scrub: true,
+              //markers: true,
+              start: 'top 50%',
+              end: 'bottom top',
+              trigger: '#chapitre-06',
+            },
+            yoyo: true,
+          })    
    
   
 /*---CHPT7---*/
@@ -462,7 +476,7 @@ gsap.to('#chapitre-07 .personnage-mauve', {
       scrollTrigger: {
         trigger: "#chapitre-08",
         start: "650vh",
-        end: "651vh", // 
+        end: "651vh", 
         scrub: true
       }
     });
@@ -516,11 +530,21 @@ gsap.to('#chapitre-07 .personnage-mauve', {
       }
     });
 
+    let shortarm = document.querySelector("#shortarm");
+    let anim6 = gsap.to(shortarm,{ 
+      morphSVG: {
+        shape: "#longarm",
+        
+    
+      },
+      repeat: -1,
+      yoyo: true 
+    });
+  
+
 
   });
 
-
- 
 
 
 

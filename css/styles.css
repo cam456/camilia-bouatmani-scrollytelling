@@ -580,7 +580,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   transform-origin: bottom center;
 }
 
-#chapitre-05 .sprite-sheet-poisson{
+#chapitre-05 #sprite-sheet-poisson{
   position: absolute;
   width:5vw;
   transform-origin: bottom center;
@@ -621,6 +621,13 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   transform-origin: bottom center;
   top: 50vh;
   left: 88vw;
+}
+
+#chapitre-06 .bulles4{
+  position: absolute;
+  width:95vw;
+  left: 2vw;
+  top: 2vh;
 }
 
 
@@ -670,11 +677,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   z-index: 1;
 }
 
-#chapitre-06 #morphing { 
-  background: url(https://lorempixel.com/1500/700) no-repeat 50% 50%; background-size: cover; position: relative; height: 100vh; 
-}
 
-#chapitre-06 #morphing svg { width: 100%; height: auto; position: absolute; bottom: 0; }
 
 /* -- CHPT7 -- */
 
@@ -746,6 +749,27 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 #motionpath {
   opacity: 0;
 }
+
+
+#svg5 {
+  position: absolute;
+  display: flex;
+  width:500px;
+  height: 500px;
+  top: 20vh;
+  left: 80vw;
+}
+
+
+#svg8 {
+  position: absolute;
+  display: flex;
+  width:20px;
+  height: 20px;
+  top: 2vh;
+  left: 20vh;
+}
+
 
 /* -- CHPT8 -- */
 #chapitre-08 {
@@ -898,3 +922,9 @@ body.is-scrolling .sprite-sheet-poisson{
 body.is-scrolling .sprite-sheet-plante{
   animation-play-state: running;
 }
+
+
+
+
+
+
