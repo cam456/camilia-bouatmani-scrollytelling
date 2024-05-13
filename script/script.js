@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
       scrollTrigger: {
         trigger: "#chapitre-03",
         start: "650vh",
-        end: "651vh", // 
+        end: "651vh", 
         scrub: true
       }
     });
@@ -138,7 +138,7 @@ const chat3 = document.querySelector('#chat3');
       }
     });
 
-    /*---gsap.fromTo(
+  gsap.fromTo(
       "#vector",
       { drawSVG: "0% 0%", opacity: 0 },
       {
@@ -147,11 +147,10 @@ const chat3 = document.querySelector('#chat3');
         opacity: 0.5,
         ease: "power1.inOut"
       }
-    );---*/
-
+    )
   });
 
-  /*---function anim6() {
+ function anim6() {
     gsap.fromTo(
       "#vector",
       { drawSVG: "0% 0%", opacity: 0 },
@@ -171,7 +170,7 @@ const chat3 = document.querySelector('#chat3');
     end: "+=200%",
     onEnter: anim6,
     scrub: true
-  });---*/
+  })
 
 /*---CHPT4---*/
 
