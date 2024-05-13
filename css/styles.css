@@ -292,7 +292,7 @@ section {
   opacity: 0; 
 }
 
-/* --#svg6 {
+#svg6 {
   position: absolute;
   display: flex;
   width: 2200px;
@@ -751,7 +751,7 @@ section {
   width: 100%;
 }
 
-/* -- #svg7 {
+#svg7 {
   position: absolute;
   display: flex;
   width: 5000px;
@@ -812,7 +812,7 @@ section {
 }
 
 
-/* --#svg1{
+#svg1{
   position: absolute;
   display: flex;
   width:400px;
@@ -880,7 +880,7 @@ section {
   visibility:hidden;
 }
 
--- */
+
 /* --FOOTER-- */
 
 .texte-footer{
