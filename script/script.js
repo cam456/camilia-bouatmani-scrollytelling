@@ -138,17 +138,19 @@ const chat3 = document.querySelector('#chat3');
       }
     });
 
-  gsap.fromTo(
-      "#vector",
-      { drawSVG: "0% 0%", opacity: 0 },
-      {
-        drawSVG: "0% 100%",
-        duration: 5,
-        opacity: 0.5,
-        ease: "power1.inOut"
-      }
-    )
+  
   });
+
+  gsap.fromTo(
+    "#vector",
+    { drawSVG: "0% 0%", opacity: 0 },
+    {
+      drawSVG: "0% 100%",
+      duration: 5,
+      opacity: 0.5,
+      ease: "power1.inOut"
+    }
+  )
 
  function anim6() {
     gsap.fromTo(
