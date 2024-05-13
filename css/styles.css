@@ -709,6 +709,7 @@ section {
 }
 
 #chapitre-07 .personnage-mauve {
+  opacity: 0;
   position: absolute;
   width: 20vw;
   top: 17vh;

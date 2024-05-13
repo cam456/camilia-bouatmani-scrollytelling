@@ -490,7 +490,7 @@ gsap.to('#chapitre-07 .personnage-mauve2', {
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-    const persmauve3 = document.querySelector('.personnage-mauve');
+    const persmauve3 = document.querySelector('.personnage-mauve2');
   
     gsap.registerPlugin(ScrollTrigger);
   
@@ -498,7 +498,7 @@ gsap.to('#chapitre-07 .personnage-mauve2', {
       opacity: 0,
       scrollTrigger: {
         trigger: "#chapitre-07",
-        start: "10vh",
+        start: "-5vh",
         end: "650vh",
         scrub: true
       }
@@ -510,6 +510,32 @@ gsap.to('#chapitre-07 .personnage-mauve2', {
         trigger: "#chapitre-08",
         start: "650vh",
         end: "651vh", 
+        scrub: true
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const persomauve2 = document.querySelector('#persomauve2');
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(persomauve2, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#chapitre-07",
+        start: "80vh",
+        end: "650vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(persomauve2, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-08",
+        start: "670vh",
+        end: "671vh", 
         scrub: true
       }
     });
