@@ -424,7 +424,6 @@ gsap.timeline({repeat: Infinity})
             },
             scrollTrigger: {
               scrub: true,
-              //markers: true,
               start: 'top 50%',
               end: 'bottom top',
               trigger: '#chapitre-06',
@@ -448,7 +447,7 @@ gsap.timeline({repeat: Infinity})
 
 
   
-/*---gsap.to('#chapitre-07 .personnage-mauve', {
+gsap.to('#chapitre-07 .personnage-mauve', {
     motionPath: '#motionpath',
     duration: 5,
     repeat: -1,
@@ -461,7 +460,7 @@ gsap.to('#chapitre-07 .personnage-mauve2', {
   repeat: -1,
   yoyo: true,
 });
----*/
+
 
   document.addEventListener("DOMContentLoaded", function() {
     const chat7 = document.querySelector('#chat7');
@@ -598,7 +597,7 @@ gsap.to('#chapitre-07 .personnage-mauve2', {
 
 
 /*---CHPT8---*/
-/*---
+
 let circle = document.querySelector("#circle");
 let anim1 = gsap.to(circle,{ 
   morphSVG: {
@@ -656,7 +655,7 @@ let anim5 = gsap.to(circlessss,{
   yoyo: true 
 });
 
----*/
+
 
 
 gsap.timeline({repeat: Infinity})
