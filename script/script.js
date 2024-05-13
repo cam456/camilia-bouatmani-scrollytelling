@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
       scrollTrigger: {
         trigger: "#chapitre-03",
         start: "650vh",
-        end: "651vh", 
+        end: "651vh", // 
         scrub: true
       }
     });
@@ -138,21 +138,20 @@ const chat3 = document.querySelector('#chat3');
       }
     });
 
-  
+    gsap.fromTo(
+      "#vector",
+      { drawSVG: "0% 0%", opacity: 0 },
+      {
+        drawSVG: "0% 100%",
+        duration: 5,
+        opacity: 0.5,
+        ease: "power1.inOut"
+      }
+    );
+
   });
 
-  gsap.fromTo(
-    "#vector",
-    { drawSVG: "0% 0%", opacity: 0 },
-    {
-      drawSVG: "0% 100%",
-      duration: 5,
-      opacity: 0.5,
-      ease: "power1.inOut"
-    }
-  )
-
- function anim6() {
+  function anim6() {
     gsap.fromTo(
       "#vector",
       { drawSVG: "0% 0%", opacity: 0 },
@@ -172,7 +171,7 @@ const chat3 = document.querySelector('#chat3');
     end: "+=200%",
     onEnter: anim6,
     scrub: true
-  })
+  });
 
 /*---CHPT4---*/
 
@@ -426,6 +425,7 @@ gsap.timeline({repeat: Infinity})
             },
             scrollTrigger: {
               scrub: true,
+              //markers: true,
               start: 'top 50%',
               end: 'bottom top',
               trigger: '#chapitre-06',
@@ -448,7 +448,6 @@ gsap.timeline({repeat: Infinity})
   .to("#chapitre-07 .chat7", { duration: 3, y: "-10%", });
 
 
-  
 gsap.to('#chapitre-07 .personnage-mauve', {
     motionPath: '#motionpath',
     duration: 5,
@@ -588,6 +587,17 @@ gsap.to('#chapitre-07 .personnage-mauve2', {
         end: "16vh",  
         scrub: true
       }
+    });
+
+    let shortarm = document.querySelector("#shortarm");
+    let anim6 = gsap.to(shortarm,{ 
+      morphSVG: {
+        shape: "#longarm",
+        
+    
+      },
+      repeat: -1,
+      yoyo: true 
     });
   
 

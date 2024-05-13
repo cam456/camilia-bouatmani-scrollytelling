@@ -292,7 +292,7 @@ section {
   opacity: 0; 
 }
 
-/* --#svg6 {
+#svg6 {
   position: absolute;
   display: flex;
   width: 2200px;
@@ -314,7 +314,7 @@ section {
   stroke-width: 3px;
   stroke-dashoffset: 0.001;
   stroke-dasharray: 0px, 999999px;
-}  -- */
+}
 
 /* -- CHPT3 -- */
 
@@ -724,6 +724,7 @@ section {
 }
 
 #chapitre-07 .personnage-mauve2 {
+  opacity: 1;
   position: absolute;
   width: 17vw;
   top: 18vh;
@@ -751,7 +752,7 @@ section {
   width: 100%;
 }
 
-/* -- #svg7 {
+#svg7 {
   position: absolute;
   display: flex;
   width: 5000px;
@@ -784,7 +785,7 @@ section {
   left: 20vh;
 }
 
--- */
+
 /* -- CHPT8 -- */
 #chapitre-08 {
   position: relative;
@@ -812,7 +813,7 @@ section {
 }
 
 
-/* --#svg1{
+#svg1{
   position: absolute;
   display: flex;
   width:400px;
@@ -879,8 +880,6 @@ section {
 #etoilessss {
   visibility:hidden;
 }
-
--- */
 /* --FOOTER-- */
 
 .texte-footer{
