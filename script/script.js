@@ -455,6 +455,13 @@ gsap.to('#chapitre-07 .personnage-mauve', {
     yoyo: true,
 });
 
+gsap.to('#chapitre-07 .personnage-mauve2', {
+  motionPath: '#motionpath',
+  duration: 5,
+  repeat: -1,
+  yoyo: true,
+});
+
 
   document.addEventListener("DOMContentLoaded", function() {
     const chat7 = document.querySelector('#chat7');
@@ -472,6 +479,32 @@ gsap.to('#chapitre-07 .personnage-mauve', {
     });
   
     gsap.to(chat7, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-08",
+        start: "650vh",
+        end: "651vh", 
+        scrub: true
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const persmauve3 = document.querySelector('.personnage-mauve');
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(persmauve3, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#chapitre-07",
+        start: "10vh",
+        end: "650vh",
+        scrub: true
+      }
+    });
+  
+    gsap.to(persmauve3, {
       opacity: 0,
       scrollTrigger: {
         trigger: "#chapitre-08",

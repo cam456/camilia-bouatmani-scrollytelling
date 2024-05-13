@@ -214,10 +214,9 @@ main {
 }
 
 section {
-  border: 1px solid rgb(132, 0, 255)
+  border: 1px solid rgba(0, 4, 255, 0.493)
 }
 
-img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 /* -- CHPT1 -- */
 
@@ -225,10 +224,12 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-size: cover;
   background-image: url(/media/img/img_arriere_plan/espace.png);
 }
 
 #chapitre-01 .chat-orange {
+  background-size: cover;
   position: absolute;
   top: 50vh;
   left: 70vw;
@@ -244,6 +245,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 }
 
 .planete {
+  background-size: cover;
   position: relative;
   width: 60vw;
   top: 20vh;
@@ -255,6 +257,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 /* -- CHPT2 -- */
 
 #chapitre-02 {
+  background-size: cover;
   background-image: url(/media/img/img_arriere_plan/paralax.png);
   min-width: 100vw;
   width: 100vw;
@@ -277,6 +280,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 
 #chat2 {
+  background-size: cover;
   background-image: url(../media/img/img_personnages/chat/blink-fall-1.png);
   overflow: hidden;
   display: flex;
@@ -349,6 +353,7 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
 
 
 #chapitre-03 .bulles{
+  
   position: absolute;
   width:95vw;
   left: 2vw;
@@ -715,6 +720,14 @@ img { border: 1px solid rgba(218, 116, 0, 0.5); }
   position: absolute;
   top: 17vh;
   left: 2vw;
+}
+
+#chapitre-07 .personnage-mauve2 {
+  position: absolute;
+  width: 17vw;
+  top: 18vh;
+  left: 43vw;
+  z-index: 1;
 }
 
 
